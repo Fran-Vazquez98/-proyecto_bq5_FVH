@@ -1,0 +1,24 @@
+{
+  "name": "-proyecto_bq5_fvh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fran-Vazquez98/-proyecto_bq5_FVH.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fran-Vazquez98/-proyecto_bq5_FVH/issues"
+  },
+  "homepage": "https://github.com/Fran-Vazquez98/-proyecto_bq5_FVH#readme",
+  "dependencies": {
+    "oracledb": "^6.10.0"
+  }
+}

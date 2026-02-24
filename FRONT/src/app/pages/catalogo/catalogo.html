@@ -1,0 +1,34 @@
+<section class="catalogo-container">
+  <header class="catalogo-header">
+    <h1>Colección Exclusiva</h1>
+    <p>Explora nuestra selección de los mejores destilados del mundo.</p>
+  </header>
+
+  <app-buscador (alBuscar)="filtrar($event)"></app-buscador>
+
+  <div *ngIf="errorMensaje" class="alert alert-error">
+    <p> {{ errorMensaje }}</p>
+  </div>
+
+  <div *ngIf="cargando" class="loader">
+    <p>Cargando whiskies...</p>
+  </div>
+
+  <div class="grid-whiskies" *ngIf="!cargando && whiskies.length > 0">
+    <app-whisky-card 
+      *ngFor="let w of whiskies" 
+      [whisky]="w" 
+      (verDetalles)="abrirModal($event)">
+    </app-whisky-card>
+  </div>
+
+  <div *ngIf="!cargando && whiskies.length === 0 && !errorMensaje" class="alert alert-info">
+    <p>No se han encontrado whiskies que coincidan con tu búsqueda.</p>
+  </div>
+
+  <app-modal 
+    *ngIf="whiskySeleccionado" 
+    [whisky]="whiskySeleccionado" 
+    (cerrar)="cerrarModal()">
+  </app-modal>
+</section>

@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo" routerLink="/" (click)="cerrarMenu()">
+      🥃 <span>WhiskyApp</span>
+    </div>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuActivo">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" [class.active]="menuActivo">
+      <li><a routerLink="/inicio" routerLinkActive="active" (click)="cerrarMenu()">Inicio</a></li>
+      <li><a routerLink="/catalogo" routerLinkActive="active" (click)="cerrarMenu()">Catálogo</a></li>
+    </ul>
+  </div>
+</nav>

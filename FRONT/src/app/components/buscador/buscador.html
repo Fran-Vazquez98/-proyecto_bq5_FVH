@@ -1,0 +1,10 @@
+<div class="search-container">
+  <input 
+    type="text" 
+    [(ngModel)]="termino" 
+    placeholder="Buscar whisky..."
+    (keyup.enter)="buscar()"
+  >
+  <button (click)="buscar()">Buscar</button>
+</div>
+

@@ -1,0 +1,77 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f4f4; 
+  color: #333;
+}
+
+
+/* Esto obliga al footer a quedarse abajo aunque la página esté vacía */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+main {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+.footer {
+  background-color: #1a1a1a;
+  color: #b48c36; 
+  padding: 25px 0;
+  text-align: center;
+  border-top: 3px solid #b48c36;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+/* Para que el cambio entre páginas (Inicio -> Catálogo) sea suave */
+.content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*  AJUSTES PARA MÓVIL */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 15px;
+  }
+  
+  .footer {
+    padding: 20px 10px;
+  }
+}

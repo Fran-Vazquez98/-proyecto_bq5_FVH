@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-image">
+    <img [src]="'./' + (whisky.IMAGEN || 'no-whisky.jpg')" [alt]="whisky.NOMBRE">
+    <span class="category-badge">{{ whisky.TIPO }}</span>
+  </div>
+
+  <div class="card-content">
+    <h3 class="whisky-title">{{ whisky.NOMBRE }}</h3>
+    <p class="whisky-brand">Distilería: <span>{{ whisky.MARCA }}</span></p>
+    
+    <div class="whisky-info">
+      <span class="info-item">
+        <strong>Edad:</strong> {{ whisky.EDAD > 0 ? whisky.EDAD + ' años' : 'NAS' }}
+      </span>
+    </div>
+
+    <button class="btn-more" (click)="onVerMas()">
+      Ver más detalles
+    </button>
+  </div>
+</div>

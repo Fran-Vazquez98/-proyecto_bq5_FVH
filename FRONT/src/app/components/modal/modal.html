@@ -1,0 +1,53 @@
+<div class="modal-overlay" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="close()" aria-label="Cerrar">&times;</button>
+    
+    <div class="modal-grid" *ngIf="whisky">
+      <div class="modal-img">
+        <img [src]="whisky.IMAGEN || 'assets/no-whisky.jpg'" [alt]="whisky.NOMBRE">
+        <div class="whisky-badge" *ngIf="whisky.GRADO_ALCOHOLICO">
+          {{ whisky.GRADO_ALCOHOLICO }}% Vol.
+        </div>
+      </div>
+
+      <div class="modal-info">
+        <header>
+          <span class="whisky-tipo">{{ whisky.TIPO }}</span>
+          <h2>{{ whisky.NOMBRE }}</h2>
+          <p class="subtitle"><strong>{{ whisky.MARCA }}</strong> | {{ whisky.PAIS_ORIGEN }}</p>
+        </header>
+        
+        <hr>
+
+        <section class="detalles-tecnicos">
+          <p><strong>Maduración:</strong> {{ whisky.EDAD }} años</p>
+          <p *ngIf="whisky.COLOR"><strong>Color:</strong> {{ whisky.COLOR }}</p>
+        </section>
+
+        <section class="cata-section" *ngIf="whisky.SABOR || whisky.AROMA">
+          <h3>Notas de Cata</h3>
+          
+          <div class="nota-item" *ngIf="whisky.AROMA">
+            <span class="icon">👃</span>
+            <div>
+              <strong>En Nariz:</strong>
+              <p>{{ whisky.AROMA }}</p>
+            </div>
+          </div>
+
+          <div class="nota-item" *ngIf="whisky.SABOR">
+            <span class="icon">👅</span>
+            <div>
+              <strong>En Boca:</strong>
+              <p>{{ whisky.SABOR }}</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="modal-footer">
+          <button class="btn-cerrar-footer" (click)="close()">Volver al catálogo</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>

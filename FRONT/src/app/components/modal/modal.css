@@ -1,0 +1,62 @@
+.whisky-badge {
+  background: #b48c36;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cata-section h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 20px 0 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.nota-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.nota-item .icon { font-size: 1.5rem; }
+
+.nota-item p {
+  margin: 0;
+  font-style: italic;
+  color: #444;
+}
+
+.btn-cerrar-footer {
+  margin-top: 25px;
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto; /* Permite scroll si el contenido es largo */
+}
+
+@media (max-width: 600px) {
+  .modal-grid {
+    display: flex;
+    flex-direction: column; /* Imagen arriba, texto abajo */
+  }
+}

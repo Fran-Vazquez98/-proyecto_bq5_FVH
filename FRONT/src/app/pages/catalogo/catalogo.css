@@ -1,0 +1,73 @@
+.catalogo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.catalogo-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.catalogo-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Grid Responsivo (Requisito 4) */
+.grid-whiskies {
+  display: grid;
+  gap: 30px;
+  /* Móvil: 1 columna */
+  grid-template-columns: 1fr; 
+  margin-top: 40px;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px) {
+  .grid-whiskies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escritorio: 3 o 4 columnas */
+@media (min-width: 1024px) {
+  .grid-whiskies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilos de Alertas */
+.alert {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-info {
+  background-color: #e2e3e5;
+  color: #383d41;
+  font-style: italic;
+}
+
+.loader {
+  text-align: center;
+  font-weight: bold;
+  color: #b48c36;
+}
+
+.contenedor-tarjetas {
+  display: grid;
+  /* Esto crea tantas columnas como quepan, mínimo 280px cada una */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}

@@ -1,25 +1,29 @@
 {
-  "name": "whisky",
+  "name": "whisky-api-back",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API de Servidor realizada en Node.js + Express para catálogo de Whiskies",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
-    
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "cert": "node generar-cert.js"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "express",
+    "oracle",
+    "https"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.2.4",
-    "express": "^5.2.1",
-    "oracledb": "^6.10.0"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.2",
+    "oracledb": "^6.3.0",
+    "selfsigned": "^2.4.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.0.0"
   }
 }
